@@ -9,6 +9,7 @@ JAR_FILE=${PROJECT_NAME}.jar
 MANIFEST_FILE=Manifest.txt
 MANIFEST_CONTENT="Main-Class: ${MAIN}"
 GIT_ROOT=.
+M="Automated commit with MakeFile"
 
 make: *.java
 	$(CC) *.java
@@ -37,7 +38,7 @@ again: make
 
 git:
 	git add ${GIT_ROOT}
-	git commit -m "Automated commit with MakeFile"
+	git commit -m $(M)
 	git push
 
 status:
